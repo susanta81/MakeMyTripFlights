@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: cicd-demo #cluster name
+  name: sus-cicd-demo #cluster name
   region: ap-south-1 #desired region
 
 nodeGroups:
