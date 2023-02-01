@@ -46,4 +46,6 @@ phases:
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
 artifacts:
-  files:  $IMAGE_REPO_NAME:$IMAGE_TAG
+  files:
+    - 'Dockerfile'
+    - $IMAGE_REPO_NAME:$IMAGE_TAG
