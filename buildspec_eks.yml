@@ -47,5 +47,4 @@ phases:
       - kubectl rollout restart -f eks_cicd/deployment.yaml
 artifacts:
   files:
-    - 'Dockerfile'
-    - $IMAGE_REPO_NAME:$IMAGE_TAG
+    - helloworld.jar
