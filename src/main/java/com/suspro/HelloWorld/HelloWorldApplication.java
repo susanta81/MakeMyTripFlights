@@ -16,7 +16,7 @@ public class HelloWorldApplication {
 	public String getFlights() throws UnknownHostException {
 
 		String ip = InetAddress.getLocalHost().getHostAddress();
-		return "Welcome to Suspro Flight Service V8 : "+ip;
+		return "Welcome to Suspro Flight Service V9 : "+ip;
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(HelloWorldApplication.class, args);
