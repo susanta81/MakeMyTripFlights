@@ -46,4 +46,4 @@ phases:
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
 artifacts:
-  files:  target/helloworld.jar
+  files:  target/$IMAGE_REPO_NAME:$IMAGE_TAG/helloworld.jar
