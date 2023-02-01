@@ -13,9 +13,14 @@ import java.net.UnknownHostException;
 public class HelloWorldApplication {
 
 	@GetMapping("/flights")
-	public String getFlights() throws UnknownHostException {
+	public String getHelloFlights() {
 
-		String ip = InetAddress.getLocalHost().getHostAddress();
+		String ip = null;
+		try {
+			ip = InetAddress.getLocalHost().getHostAddress();
+		}catch(UnknownHostException ex){
+			ex.printStackTrace();
+		}
 		return "Welcome to Susanta Flight Service V11 : "+ip;
 	}
 	public static void main(String[] args) {

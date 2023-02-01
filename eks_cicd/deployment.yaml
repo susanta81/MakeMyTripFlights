@@ -22,4 +22,4 @@ spec:
           imagePullPolicy: Always
           name: cicd-demo
           ports:
-            - containerPort: 8080
+            - containerPort: 9090
