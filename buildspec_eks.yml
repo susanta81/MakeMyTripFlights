@@ -47,4 +47,4 @@ phases:
       - kubectl rollout restart -f eks_cicd/deployment.yaml
 artifacts:
   files:
-    - target/helloworld.jar
+    - target/*
