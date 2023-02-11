@@ -7,12 +7,12 @@ metadata:
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: backend
     app.kubernetes.io/managed-by: kubectl
-  name: cicd-demo
+  name: spring-boot-k8s-svc
 spec:
   selector:
-    app: cicd-demo
+    app: spring-boot-k8s
   type: LoadBalancer
   ports:
    -  protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 8080

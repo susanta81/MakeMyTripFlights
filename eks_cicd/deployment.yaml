@@ -6,20 +6,20 @@ metadata:
     app.kubernetes.io/instance: cicd-demo-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
-  name: cicd-demo-deployment1
+  name: spring-boot-k8s
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cicd-demo
+      app: spring-boot-k8s
   template:
     metadata:
       labels:
-        app: cicd-demo
+        app: spring-boot-k8s
     spec:
       containers:
-        - image: 602098555751.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo:latest
+        - image: 602098555751.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo1102:latest
           imagePullPolicy: Always
-          name: cicd-demo
+          name: spring-boot-k8s
           ports:
             - containerPort: 8080
