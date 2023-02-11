@@ -15,9 +15,9 @@ phases:
 
   post_build:
     commands:
-      - docker push $REPOSITORY_URI:latest
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - export IMAGE_NAME=latest
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - kubectl apply -f eks_cicd/deployment.yaml
+      - kubectl rollout restart -f eks_cicd/deployment.yaml
       - export IMAGE_URI=$REPOSITORY_URI:$IMAGE_TAG
       - "printf '[{\"name\":\"%s\",\"imageUri\":\"%s\"}]' \"$IMAGE_NAME\" \"$IMAGE_URI\" > imagedefinitions.json"
 
