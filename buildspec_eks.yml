@@ -50,4 +50,4 @@ phases:
 artifacts:
   files:
     - imagedefinitions.json
-    - spring-boot-k8s.jar
+    - myapp/spring-boot-k8s.jar
