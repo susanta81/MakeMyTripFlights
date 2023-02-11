@@ -21,7 +21,7 @@ public class HelloWorldApplication {
 		}catch(UnknownHostException ex){
 			ex.printStackTrace();
 		}
-		return "Welcome to Susanta Flight Service V14 : "+ip;
+		return "Welcome to Susanta Flight Service V15 : "+ip;
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(HelloWorldApplication.class, args);
