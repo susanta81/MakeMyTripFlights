@@ -21,6 +21,7 @@ public class HelloWorldApplication {
 		}catch(UnknownHostException ex){
 			ex.printStackTrace();
 		}
+		System.out.print("<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>");
 		return "Welcome to Susanta Flight Service V18 : "+ip;
 	}
 	public static void main(String[] args) {
