@@ -45,9 +45,9 @@ phases:
       - echo Push the latest image to cluster
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
-      - printf '[{"name":"hellworld","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"spring-boot-k8s","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
-    - target/hellworld.jar
+    - target/spring-boot-k8s.jar
