@@ -23,7 +23,7 @@ phases:
       - aws --version
       - aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=015389403723.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo1102
+      - REPOSITORY_URI=602098555751.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo1102
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
 
   build:
@@ -38,6 +38,6 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
