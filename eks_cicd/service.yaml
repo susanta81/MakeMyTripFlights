@@ -10,7 +10,7 @@ metadata:
   name: spring-boot-k8s-svc
 spec:
   selector:
-    app: spring-boot-k8s
+    app: spring-boot-k8s-demo
   type: LoadBalancer
   ports:
    -  protocol: TCP
