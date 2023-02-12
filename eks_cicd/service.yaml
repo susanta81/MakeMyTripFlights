@@ -11,7 +11,7 @@ metadata:
 spec:
   selector:
     app: spring-boot-k8s-demo
-  type: LoadBalancer
+  type: NodePort
   ports:
    -  protocol: TCP
       port: 8080
