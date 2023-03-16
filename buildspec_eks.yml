@@ -22,7 +22,7 @@ phases:
   build:
     commands:
       # Build Docker Image
-      - docker login
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 602098555751.dkr.ecr.ap-south-1.amazonaws.com
       - echo "Build started on `date`"
       - echo "Building the Docker image..."
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
