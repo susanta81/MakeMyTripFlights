@@ -30,7 +30,7 @@ phases:
       # Push Docker Image to ECR Repository
       - echo "Build completed on `date`"
       - echo "Pushing the Docker image to ECR Repository"
-      - docker push 602098555751.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo:latest
+      - docker push $IMAGE_REPO_NAME:$TAG
       - echo "Docker Image Push to ECR Completed -  $REPOSITORY_URI:$TAG"
       # Extracting AWS Credential Information using STS Assume Role for kubectl
       - echo "Setting Environment Variables related to AWS CLI for Kube Config Setup"
