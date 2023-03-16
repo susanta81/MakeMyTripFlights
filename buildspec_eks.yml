@@ -10,7 +10,7 @@ phases:
       - TAG="latest"
       # Update Image tag in our Kubernetes Deployment Manifest
       - echo "Update Image tag in kube-manifest..."
-      - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' kube-manifests/01-DEVOPS-Nginx-Deployment.yml
+      #- sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' kube-manifests/01-DEVOPS-Nginx-Deployment.yml
       # Verify AWS CLI Version
       - echo "Verify AWS CLI Version..."
       - aws --version
