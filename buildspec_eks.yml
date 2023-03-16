@@ -47,6 +47,7 @@ phases:
       # Apply changes to our Application using kubectl
       - echo "Apply changes to kube manifests"
       #- kubectl apply -f kube-manifests/
+      - kubectl get svc
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
       - echo "Completed applying changes to Kubernetes Objects"
