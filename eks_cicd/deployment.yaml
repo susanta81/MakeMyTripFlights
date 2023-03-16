@@ -18,7 +18,7 @@ spec:
         app: spring-boot-k8s
     spec:
       containers:
-        - image: 602098555751.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo1102:latest
+        - image: 602098555751.dkr.ecr.ap-south-1.amazonaws.com/sus-cicd-demo-repo:latest
           imagePullPolicy: Always
           name: spring-boot-k8s
           ports:
